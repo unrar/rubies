@@ -41,3 +41,15 @@ puts "Now #{mycat.name} is a #{mycat.whichType}."
 puts "Question: Is #{mycat.name} a firefox?"
 puts "Answer: Yes."
 puts "That's #{mycat.isFirefox?}!"
+puts "What's #{mycat.name} now?"
+newthingie = gets.chomp
+mycat.type = newthingie
+puts "Now #{mycat.name} is a #{mycat.whichType}! Do you want a new name for it? (y/n)"
+yn = gets.chomp
+if yn == "y"
+	puts "New name:"
+	nn = gets.chomp
+	mycat.name = nn
+	puts "Now your #{mycat.whichType} is a #{mycat.name}!"
+end
+puts "Is #{mycat.name} a firefox? #{mycat.isFirefox?}."
