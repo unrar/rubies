@@ -3,33 +3,33 @@
 # encode: UTF-8
 
 class Animal
-	# Attributes
-	attr_accessor :name, :age
+  # Attributes
+  attr_accessor :name, :age
 
-	# Constructor
-	def initialize(name, age, type)
-		@name, @age, @type = name, age, type
-		puts "You've created an animal called #{@name}!"
-	end
+  # Constructor
+  def initialize(name, age, type)
+    @name, @age, @type = name, age, type
+    puts "You've created an animal called #{@name}!"
+  end
 
-	# Return the type
-	def which_type
-		return @type
-	end
+  # Return the type
+  def which_type
+    return @type
+  end
 
-	# Change the type
-	def type=(new_type)
-		@type = new_type
-	end
+  # Change the type
+  def type=(new_type)
+    @type = new_type
+  end
 
-	# Is the animal a firefox?
-	def firefox?
-		if @type.downcase == "firefox"
-			return true
-		else
-			return false
-		end
-	end
+  # Is the animal a firefox?
+  def firefox?
+    if @type.downcase == "firefox"
+      return true
+    else
+      return false
+    end
+  end
 end
 
 mycat = Animal.new("Roger", 2, "cat")
@@ -47,9 +47,9 @@ mycat.type = newthingie
 puts "Now #{mycat.name} is a #{mycat.which_type}! Do you want a new name for it? (y/n)"
 yn = gets.chomp
 if yn == "y"
-	puts "New name:"
-	nn = gets.chomp
-	mycat.name = nn
-	puts "Now your #{mycat.which_type} is a #{mycat.name}!"
+  puts "New name:"
+  nn = gets.chomp
+  mycat.name = nn
+  puts "Now your #{mycat.which_type} is a #{mycat.name}!"
 end
 puts "Is #{mycat.name} a firefox? #{mycat.firefox?}."
